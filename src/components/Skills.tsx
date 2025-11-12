@@ -47,28 +47,28 @@ const SkillCard = ({ title, skills, index }: { title: string; skills: Array<{ na
       transition={{ duration: 0.6, delay: index * 0.2 }}
       className="group relative"
     >
-      <div className="relative p-8 rounded-2xl bg-card border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 overflow-hidden">
+      <div className="relative p-6 rounded-2xl bg-card border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ boxShadow: 'var(--shadow-glow)' }} />
         
-        <h3 className="text-2xl font-bold mb-6 text-center">{title}</h3>
+        <h3 className="text-2xl font-bold mb-8 text-center">{title}</h3>
         
-        <div className="grid grid-cols-5 gap-6 justify-items-center">
+        <div className="grid grid-cols-5 gap-8 justify-items-center px-2">
           {skills.map((skill) => (
             <motion.div
               key={skill.name}
               whileHover={{ scale: 1.12, y: -5 }}
               className="relative group/icon"
             >
-              <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 relative">
+              <div className="flex flex-col items-center gap-3">
+                <div className="w-14 h-14 relative flex items-center justify-center">
                   <img
                     src={skill.icon}
                     alt={skill.name}
                     className="w-full h-full object-contain transition-all duration-300 group-hover/icon:drop-shadow-[0_0_8px_hsl(var(--neon-glow))]"
                   />
                 </div>
-                <span className="text-xs text-center opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 absolute -bottom-6 left-1/2 -translate-x-1/2 whitespace-nowrap bg-popover px-2 py-1 rounded">
+                <span className="text-xs text-center opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-popover px-2 py-1 rounded z-10">
                   {skill.name}
                 </span>
               </div>

@@ -17,8 +17,12 @@ const socialLinks = [
     label: "hamedzezo23@gmail.com",
     href: "mailto:hamedzezo23@gmail.com",
   },
-  { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
-  { icon: Github, label: "GitHub", href: "https://github.com" },
+  {
+    icon: Linkedin,
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/ziad-mohamed-a902ba336/",
+  },
+  { icon: Github, label: "GitHub", href: "https://github.com/ZiadMohamed10" },
 ];
 
 export const Contact = () => {

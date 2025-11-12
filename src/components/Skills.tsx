@@ -53,15 +53,15 @@ const SkillCard = ({ title, skills, index }: { title: string; skills: Array<{ na
         
         <h3 className="text-2xl font-bold mb-8 text-center">{title}</h3>
         
-        <div className="grid grid-cols-5 gap-8 justify-items-center px-2">
+        <div className="grid grid-cols-5 gap-6 justify-items-center px-2">
           {skills.map((skill) => (
             <motion.div
               key={skill.name}
               whileHover={{ scale: 1.12, y: -5 }}
               className="relative group/icon"
             >
-              <div className="flex flex-col items-center gap-3">
-                <div className="w-14 h-14 relative flex items-center justify-center">
+              <div className="flex flex-col items-center gap-2">
+                <div className="w-12 h-12 relative flex items-center justify-center p-1">
                   <img
                     src={skill.icon}
                     alt={skill.name}

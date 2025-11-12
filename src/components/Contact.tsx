@@ -7,9 +7,16 @@ import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
+// **Formspree imports**
+import { useForm, ValidationError } from "@formspree/react";
+
 const socialLinks = [
   { icon: Phone, label: "+20 101 834 9359", href: "tel:+201018349359" },
-  { icon: Mail, label: "hamedzezo23@gmail.com", href: "mailto:hamedzezo23@gmail.com" },
+  {
+    icon: Mail,
+    label: "hamedzezo23@gmail.com",
+    href: "mailto:hamedzezo23@gmail.com",
+  },
   { icon: Linkedin, label: "LinkedIn", href: "https://linkedin.com" },
   { icon: Github, label: "GitHub", href: "https://github.com" },
 ];
@@ -18,15 +25,28 @@ export const Contact = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const { toast } = useToast();
-  const [formData, setFormData] = useState({ name: "", email: "", message: "" });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  // **Formspree hook**
+  const [state, handleSubmit] = useForm("mjkjvlza"); // ضع هنا Form ID الخاص بك
+
+  // Reset form data on success
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+
+  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    toast({
-      title: "Message Sent!",
-      description: "Thanks for reaching out. I'll get back to you soon!",
+    handleSubmit(e).then(() => {
+      if (state.succeeded) {
+        toast({
+          title: "Message Sent!",
+          description: "Thanks for reaching out. I'll get back to you soon!",
+        });
+        setFormData({ name: "", email: "", message: "" });
+      }
     });
-    setFormData({ name: "", email: "", message: "" });
   };
 
   return (
@@ -40,7 +60,9 @@ export const Contact = () => {
           className="text-center mb-16"
         >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">Get In Touch</h2>
-          <p className="text-muted-foreground text-lg">Let's work together on your next project</p>
+          <p className="text-muted-foreground text-lg">
+            Let's work together on your next project
+          </p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
@@ -52,7 +74,9 @@ export const Contact = () => {
             className="space-y-8"
           >
             <div>
-              <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+              <h3 className="text-2xl font-semibold mb-6">
+                Contact Information
+              </h3>
               <div className="space-y-4">
                 {socialLinks.map((link, index) => {
                   const Icon = link.icon;
@@ -63,7 +87,9 @@ export const Contact = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                       initial={{ opacity: 0, x: -20 }}
-                      animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                      animate={
+                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                      }
                       transition={{ duration: 0.4, delay: index * 0.1 }}
                       className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary transition-all duration-300 hover:scale-105 group"
                     >
@@ -83,39 +109,64 @@ export const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={onSubmit} className="space-y-6">
               <div>
                 <Input
                   placeholder="Your Name"
+                  name="name"
                   value={formData.name}
-                  onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, name: e.target.value })
+                  }
                   required
                   className="bg-card border-border focus:border-primary transition-colors"
+                />
+                <ValidationError
+                  prefix="Name"
+                  field="name"
+                  errors={state.errors}
                 />
               </div>
               <div>
                 <Input
                   type="email"
                   placeholder="Your Email"
+                  name="email"
                   value={formData.email}
-                  onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, email: e.target.value })
+                  }
                   required
                   className="bg-card border-border focus:border-primary transition-colors"
+                />
+                <ValidationError
+                  prefix="Email"
+                  field="email"
+                  errors={state.errors}
                 />
               </div>
               <div>
                 <Textarea
                   placeholder="Your Message"
+                  name="message"
                   value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                  onChange={(e) =>
+                    setFormData({ ...formData, message: e.target.value })
+                  }
                   required
                   rows={6}
                   className="bg-card border-border focus:border-primary transition-colors resize-none"
+                />
+                <ValidationError
+                  prefix="Message"
+                  field="message"
+                  errors={state.errors}
                 />
               </div>
               <Button
                 type="submit"
                 size="lg"
+                disabled={state.submitting}
                 className="w-full group relative overflow-hidden"
               >
                 Send Message

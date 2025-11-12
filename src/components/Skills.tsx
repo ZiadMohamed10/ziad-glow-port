@@ -102,7 +102,7 @@ const SkillCard = ({
                 <div className="w-12 h-12 relative flex items-center justify-center p-1">
                   <img src={skill.icon} alt={skill.name} className="w-full h-full object-contain transition-all duration-300 group-hover/icon:drop-shadow-[0_0_8px_hsl(var(--neon-glow))]" />
                 </div>
-                <span className="text-xs text-center opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-popover rounded z-10 mx-0 px-0 py-[10px]">
+                <span className="text-xs text-center opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 absolute -bottom-8 left-1/2 -translate-x-1/2 whitespace-nowrap bg-white/21 rounded z-10 mx-0 px-0 py-[10px]">
                   {skill.name}
                 </span>
               </div>

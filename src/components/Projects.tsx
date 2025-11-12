@@ -26,7 +26,7 @@ const projects = [
   {
     title: "El Shibli Construction & Development Portal",
     description:
-      "Developing a comprehensive web portal for El Shibili, a construction and development company, showcasing their services and projects.",
+      "Developing a comprehensive web portal for El Shibli, a construction and development company, showcasing their services and projects.",
     icon: Building2,
     status: "In Progress",
     technologies: ["React", "TypeScript", "Tailwind CSS"],

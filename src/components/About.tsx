@@ -64,9 +64,6 @@ export const About = () => {
               I focus on creating clean, maintainable code and visually polished designs.
             </p>
             
-            <p className="text-lg leading-relaxed">
-              Currently working on a law firm website and a government infrastructure portal — both in progress.
-            </p>
 
             <div className="space-y-3 pt-4">
               <h3 className="text-xl font-semibold mb-4">What I Bring:</h3>

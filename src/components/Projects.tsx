@@ -4,6 +4,8 @@ import { useRef } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Building2, Scale } from "lucide-react";
+import lawFirmImage from "@/assets/law-firm-project.jpg";
+import infrastructureImage from "@/assets/infrastructure-project.jpg";
 
 const projects = [
   {
@@ -12,6 +14,7 @@ const projects = [
     icon: Scale,
     status: "In Progress",
     technologies: ["React", "Tailwind CSS", "TypeScript"],
+    image: lawFirmImage,
   },
   {
     title: "Government Infrastructure Portal",
@@ -19,6 +22,7 @@ const projects = [
     icon: Building2,
     status: "In Progress",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
+    image: infrastructureImage,
   },
 ];
 
@@ -38,6 +42,15 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" style={{ boxShadow: 'var(--shadow-glow)' }} />
         
+        <div className="relative h-48 overflow-hidden">
+          <img 
+            src={project.image} 
+            alt={project.title}
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-card to-transparent" />
+        </div>
+
         <CardHeader>
           <div className="flex items-start justify-between mb-4">
             <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
@@ -76,8 +89,8 @@ export const Projects = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">Current Projects</h2>
-          <p className="text-muted-foreground text-lg">What I'm working on right now</p>
+          <h2 className="text-4xl md:text-5xl font-bold mb-4">Featured Projects</h2>
+          <p className="text-muted-foreground text-lg">A showcase of my recent work and personal projects</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">

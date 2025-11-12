@@ -11,12 +11,12 @@ const skillsData = [
       { name: "JavaScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" },
       { name: "TypeScript", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg" },
       { name: "React", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" },
+      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
     ],
   },
   {
     title: "Tools & UI",
     skills: [
-      { name: "Tailwind CSS", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg" },
       { name: "VS Code", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg" },
       { name: "Git", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" },
       { name: "GitHub", icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" },
@@ -53,7 +53,7 @@ const SkillCard = ({ title, skills, index }: { title: string; skills: Array<{ na
         
         <h3 className="text-2xl font-bold mb-6 text-center">{title}</h3>
         
-        <div className="grid grid-cols-5 gap-4">
+        <div className="grid grid-cols-5 gap-6 justify-items-center">
           {skills.map((skill) => (
             <motion.div
               key={skill.name}

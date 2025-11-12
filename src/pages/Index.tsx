@@ -11,9 +11,9 @@ const Index = () => {
     <div className="min-h-screen transition-colors duration-500">
       <ThemeToggle />
       <Hero />
+      <About />
       <Skills />
       <Projects />
-      <About />
       <Contact />
       <Footer />
     </div>

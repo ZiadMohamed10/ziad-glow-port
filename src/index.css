@@ -8,76 +8,76 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 210 20% 98%;
-    --foreground: 222 47% 11%;
+    --background: 240 10% 96%;
+    --foreground: 240 8% 12%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 240 8% 12%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover-foreground: 240 8% 12%;
 
-    --primary: 211 100% 50%;
+    --primary: 262 83% 58%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 240 5% 92%;
+    --secondary-foreground: 240 8% 12%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 240 5% 92%;
+    --muted-foreground: 240 4% 46%;
 
-    --accent: 211 100% 50%;
+    --accent: 280 90% 65%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 211 100% 50%;
+    --border: 240 6% 88%;
+    --input: 240 6% 88%;
+    --ring: 262 83% 58%;
 
     --radius: 0.75rem;
 
-    --neon-glow: 211 100% 50%;
-    --gradient-start: 211 100% 50%;
-    --gradient-end: 271 76% 53%;
+    --neon-glow: 262 83% 58%;
+    --gradient-start: 262 83% 58%;
+    --gradient-end: 340 82% 62%;
     
     --shadow-glow: 0 0 30px hsl(var(--neon-glow) / 0.3);
     --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 0 0% 2%;
-    --foreground: 0 0% 98%;
+    --background: 222 47% 4%;
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 5%;
-    --card-foreground: 0 0% 98%;
+    --card: 222 47% 7%;
+    --card-foreground: 210 40% 98%;
 
-    --popover: 0 0% 5%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 222 47% 7%;
+    --popover-foreground: 210 40% 98%;
 
-    --primary: 84 100% 63%;
-    --primary-foreground: 0 0% 5%;
+    --primary: 177 89% 55%;
+    --primary-foreground: 222 47% 4%;
 
-    --secondary: 0 0% 10%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 222 47% 11%;
+    --secondary-foreground: 210 40% 98%;
 
-    --muted: 0 0% 10%;
-    --muted-foreground: 0 0% 65%;
+    --muted: 222 47% 11%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 84 100% 63%;
-    --accent-foreground: 0 0% 5%;
+    --accent: 192 100% 58%;
+    --accent-foreground: 222 47% 4%;
 
     --destructive: 0 63% 31%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 210 40% 98%;
 
-    --border: 0 0% 15%;
-    --input: 0 0% 15%;
-    --ring: 84 100% 63%;
+    --border: 217 33% 17%;
+    --input: 217 33% 17%;
+    --ring: 177 89% 55%;
 
-    --neon-glow: 84 100% 63%;
-    --gradient-start: 84 100% 63%;
-    --gradient-end: 160 100% 50%;
+    --neon-glow: 177 89% 55%;
+    --gradient-start: 177 89% 55%;
+    --gradient-end: 192 100% 58%;
     
     --shadow-glow: 0 0 30px hsl(var(--neon-glow) / 0.5);
   }

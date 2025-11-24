@@ -94,5 +94,33 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .spotlight-effect {
+    background: radial-gradient(
+      600px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+      hsl(var(--neon-glow) / 0.15),
+      transparent 40%
+    );
+  }
+  
+  .glass-effect {
+    background: hsl(var(--card) / 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid hsl(var(--border) / 0.3);
+  }
+  
+  .neon-border {
+    box-shadow: 0 0 20px hsl(var(--neon-glow) / 0.5),
+                inset 0 0 20px hsl(var(--neon-glow) / 0.1);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 30px hsl(var(--neon-glow) / 0.8),
+                 0 0 60px hsl(var(--neon-glow) / 0.4);
   }
 }

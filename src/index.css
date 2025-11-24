@@ -8,76 +8,76 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 20%;
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 20%;
+    --card-foreground: 222 47% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 20%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 0 0% 20%;
+    --primary: 211 100% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 40 6% 90%;
-    --secondary-foreground: 0 0% 20%;
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 40 6% 90%;
-    --muted-foreground: 0 0% 44%;
+    --muted: 210 40% 96%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 0 0% 44%;
+    --accent: 211 100% 50%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 0 0% 90%;
-    --input: 0 0% 90%;
-    --ring: 0 0% 44%;
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 211 100% 50%;
 
     --radius: 0.75rem;
 
-    --neon-glow: 0 0% 44%;
-    --gradient-start: 0 0% 20%;
-    --gradient-end: 0 0% 44%;
+    --neon-glow: 211 100% 50%;
+    --gradient-start: 211 100% 50%;
+    --gradient-end: 271 76% 53%;
     
     --shadow-glow: 0 0 30px hsl(var(--neon-glow) / 0.3);
     --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .dark {
-    --background: 354 51% 12%;
-    --foreground: 0 0% 95%;
+    --background: 0 0% 2%;
+    --foreground: 0 0% 98%;
 
-    --card: 354 51% 18%;
-    --card-foreground: 0 0% 95%;
+    --card: 0 0% 5%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 354 51% 18%;
-    --popover-foreground: 0 0% 95%;
+    --popover: 0 0% 5%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 354 65% 45%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 84 100% 63%;
+    --primary-foreground: 0 0% 5%;
 
-    --secondary: 354 40% 25%;
-    --secondary-foreground: 0 0% 95%;
+    --secondary: 0 0% 10%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 354 40% 20%;
-    --muted-foreground: 0 0% 70%;
+    --muted: 0 0% 10%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 354 65% 55%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 84 100% 63%;
+    --accent-foreground: 0 0% 5%;
 
     --destructive: 0 63% 31%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 354 30% 25%;
-    --input: 354 30% 25%;
-    --ring: 354 65% 55%;
+    --border: 0 0% 15%;
+    --input: 0 0% 15%;
+    --ring: 84 100% 63%;
 
-    --neon-glow: 354 65% 55%;
-    --gradient-start: 354 51% 22%;
-    --gradient-end: 354 65% 45%;
+    --neon-glow: 84 100% 63%;
+    --gradient-start: 84 100% 63%;
+    --gradient-end: 160 100% 50%;
     
     --shadow-glow: 0 0 30px hsl(var(--neon-glow) / 0.5);
   }
@@ -95,28 +95,4 @@ All colors MUST be HSL.
   body {
     @apply bg-background text-foreground;
   }
-}
-
-@keyframes ripple {
-  0% {
-    transform: scale(0);
-    opacity: 0.6;
-  }
-  100% {
-    transform: scale(4);
-    opacity: 0;
-  }
-}
-
-.dark .ripple-container {
-  position: relative;
-  overflow: hidden;
-}
-
-.dark .ripple {
-  position: absolute;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0) 70%);
-  animation: ripple 0.8s ease-out;
-  pointer-events: none;
 }

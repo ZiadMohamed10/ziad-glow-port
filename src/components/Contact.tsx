@@ -14,8 +14,8 @@ const socialLinks = [
   { icon: Phone, label: "+20 101 834 9359", href: "tel:+201018349359" },
   {
     icon: Mail,
-    label: "hamedzezo23@gmail.com",
-    href: "mailto:hamedzezo23@gmail.com",
+    label: "ziadhamed635@gmail.com",
+    href: "mailto:ziadhamed635@gmail.com",
   },
   {
     icon: Linkedin,

@@ -7,15 +7,15 @@ import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
-// **Formspree imports**
+// Formspree
 import { useForm, ValidationError } from "@formspree/react";
 
 const socialLinks = [
   { icon: Phone, label: "+20 101 834 9359", href: "tel:+201018349359" },
   {
     icon: Mail,
-    label: "ziadhamed635@gmail.com",
-    href: "mailto:ziadhamed635@gmail.com",
+    label: "hamedzezo23@gmail.com",
+    href: "mailto:hamedzezo23@gmail.com",
   },
   {
     icon: Linkedin,
@@ -30,27 +30,34 @@ export const Contact = () => {
   const isInView = useInView(ref, { once: true });
   const { toast } = useToast();
 
-  // **Formspree hook**
-  const [state, handleSubmit] = useForm("mjkjvlza"); // ضع هنا Form ID الخاص بك
+  // Formspree Hook
+  const [state, handleSubmit] = useForm("mjkjvlza");
 
-  // Reset form data on success
+  // Form Data
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  // Submit Handler
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    handleSubmit(e).then(() => {
-      if (state.succeeded) {
-        toast({
-          title: "Message Sent!",
-          description: "Thanks for reaching out. I'll get back to you soon!",
-        });
-        setFormData({ name: "", email: "", message: "" });
-      }
-    });
+
+    await handleSubmit(e);
+
+    if (state.succeeded) {
+      toast({
+        title: "Message Sent!",
+        description: "Thanks for reaching out. I'll get back to you soon!",
+      });
+
+      setFormData({
+        name: "",
+        email: "",
+        message: "",
+      });
+    }
   };
 
   return (
@@ -70,6 +77,7 @@ export const Contact = () => {
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-12">
+          {/* Left Section - Contact Info */}
           <motion.div
             ref={ref}
             initial={{ opacity: 0, x: -50 }}
@@ -77,37 +85,34 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <div>
-              <h3 className="text-2xl font-semibold mb-6">
-                Contact Information
-              </h3>
-              <div className="space-y-4">
-                {socialLinks.map((link, index) => {
-                  const Icon = link.icon;
-                  return (
-                    <motion.a
-                      key={link.label}
-                      href={link.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      initial={{ opacity: 0, x: -20 }}
-                      animate={
-                        isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
-                      }
-                      transition={{ duration: 0.4, delay: index * 0.1 }}
-                      className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary transition-all duration-300 hover:scale-105 group"
-                    >
-                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                        <Icon className="w-5 h-5 text-primary" />
-                      </div>
-                      <span className="text-base">{link.label}</span>
-                    </motion.a>
-                  );
-                })}
-              </div>
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+            <div className="space-y-4">
+              {socialLinks.map((link, index) => {
+                const Icon = link.icon;
+                return (
+                  <motion.a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={
+                      isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                    }
+                    transition={{ duration: 0.4, delay: index * 0.1 }}
+                    className="flex items-center gap-4 p-4 rounded-lg bg-card border border-border hover:border-primary transition-all duration-300 hover:scale-105 group"
+                  >
+                    <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                      <Icon className="w-5 h-5 text-primary" />
+                    </div>
+                    <span className="text-base">{link.label}</span>
+                  </motion.a>
+                );
+              })}
             </div>
           </motion.div>
 
+          {/* Right Section - Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
@@ -131,6 +136,7 @@ export const Contact = () => {
                   errors={state.errors}
                 />
               </div>
+
               <div>
                 <Input
                   type="email"
@@ -149,6 +155,7 @@ export const Contact = () => {
                   errors={state.errors}
                 />
               </div>
+
               <div>
                 <Textarea
                   placeholder="Your Message"
@@ -167,6 +174,7 @@ export const Contact = () => {
                   errors={state.errors}
                 />
               </div>
+
               <Button
                 type="submit"
                 size="lg"

@@ -16,7 +16,7 @@ import dentalImage from "@/assets/dental-project.jpg";
 
 const projects = [
   {
-    title: "Rights Law Firm Website",
+    title: "Rights Law Firm",
     description:
       "Building a modern, professional website for Rights Law Firm with responsive design, service pages, and contact forms.",
     icon: Scale,

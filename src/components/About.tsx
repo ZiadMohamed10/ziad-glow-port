@@ -59,13 +59,20 @@ export const About = () => {
             className="space-y-6"
           >
             <p className="text-lg leading-relaxed">
-              I'm Ziad Mohamed, a frontend developer with 3 years of experience building responsive, 
-              high-performance web interfaces using HTML, CSS, JavaScript, TypeScript, and React. 
-              I focus on creating clean, maintainable code and visually polished designs.
+              Front-end Developer with 3 years of hands-on experience building
+              modern, responsive, and high-performance web applications. Skilled
+              in HTML5, CSS3, JavaScript, React.js, TypeScript, and Tailwind
+              CSS, with a solid understanding of component-based architecture
+              and clean, maintainable code practices. Adept at translating UI/UX
+              designs into functional interfaces, optimizing performance, and
+              collaborating within agile teams. Strong knowledge of Git/GitHub
+              workflows and a continuous learner committed to delivering
+              seamless user experiences and reliable frontend solutions.
             </p>
-            
+
             <p className="text-lg leading-relaxed">
-              Currently working on a law firm website and a government infrastructure portal — both in progress.
+              Currently working on a law firm website and a government
+              infrastructure portal — both in progress.
             </p>
 
             <div className="space-y-3 pt-4">
@@ -74,7 +81,9 @@ export const About = () => {
                 <motion.div
                   key={strength}
                   initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
+                  animate={
+                    isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }
+                  }
                   transition={{ duration: 0.4, delay: 0.6 + index * 0.1 }}
                   className="flex items-center gap-3 group"
                 >

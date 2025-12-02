@@ -9,9 +9,10 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Building2, Scale } from "lucide-react";
+import { Building2, Scale, Stethoscope } from "lucide-react";
 import lawFirmImage from "@/assets/law-firm-project.jpg";
 import infrastructureImage from "@/assets/infrastructure-project.jpg";
+import dentalImage from "@/assets/dental-project.jpg";
 
 const projects = [
   {
@@ -31,6 +32,15 @@ const projects = [
     status: "In Progress",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
     image: infrastructureImage,
+  },
+  {
+    title: "Premium Dental Supplies",
+    description:
+      "Creating an e-commerce platform for premium dental equipment and supplies, featuring product catalogs, ordering system, and customer portal.",
+    icon: Stethoscope,
+    status: "In Progress",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    image: dentalImage,
   },
 ];
 

@@ -39,7 +39,7 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            3 Years of Experience Building Modern Web Interfaces
+            2 Years of Experience Building Modern Web Interfaces
           </motion.p>
 
           <motion.div

@@ -112,7 +112,7 @@ export const About = () => {
             className="space-y-6"
           >
             <p className="text-lg leading-relaxed">
-              Front-end Developer with 3 years of hands-on experience building
+              Front-end Developer with 2 years of hands-on experience building
               modern, responsive, and high-performance web applications. Skilled
               in HTML5, CSS3, JavaScript, React.js, TypeScript, and Tailwind
               CSS, with a solid understanding of component-based architecture

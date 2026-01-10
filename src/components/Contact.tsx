@@ -6,9 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, Phone } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
-
-// Formspree
-import { useForm, ValidationError } from "@formspree/react";
+import emailjs from "@emailjs/browser";
 
 const socialLinks = [
   { icon: Phone, label: "+20 101 834 9359", href: "tel:+201018349359" },
@@ -25,28 +23,44 @@ const socialLinks = [
   { icon: Github, label: "GitHub", href: "https://github.com/ZiadMohamed10" },
 ];
 
+// EmailJS Configuration
+const EMAILJS_SERVICE_ID = "service_portfolio";
+const EMAILJS_TEMPLATE_ID = "template_contact";
+const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+
 export const Contact = () => {
   const ref = useRef(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const isInView = useInView(ref, { once: true });
   const { toast } = useToast();
 
-  // Formspree Hook
-  const [state, handleSubmit] = useForm("xlgrbqny");
-
-  // Form Data
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     message: "",
   });
 
-  // Submit Handler
   const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    await handleSubmit(e);
+    if (isSubmitting) return;
 
-    if (state.succeeded) {
+    setIsSubmitting(true);
+
+    try {
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          message: formData.message,
+          to_email: "ziadhamed635@gmail.com",
+        },
+        EMAILJS_PUBLIC_KEY
+      );
+
       toast({
         title: "Message Sent!",
         description: "Thanks for reaching out. I'll get back to you soon!",
@@ -57,6 +71,14 @@ export const Contact = () => {
         email: "",
         message: "",
       });
+    } catch (error) {
+      toast({
+        title: "Error",
+        description: "Failed to send message. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
@@ -118,8 +140,7 @@ export const Contact = () => {
             animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
             transition={{ duration: 0.6 }}
           >
-            <form onSubmit={onSubmit} className="space-y-6">
-              <input type="hidden" name="_to" value="ziadhamed635@gmail.com" />
+            <form ref={formRef} onSubmit={onSubmit} className="space-y-6">
               <div>
                 <Input
                   placeholder="Your Name"
@@ -130,11 +151,6 @@ export const Contact = () => {
                   }
                   required
                   className="bg-card border-border focus:border-primary transition-colors"
-                />
-                <ValidationError
-                  prefix="Name"
-                  field="name"
-                  errors={state.errors}
                 />
               </div>
 
@@ -150,11 +166,6 @@ export const Contact = () => {
                   required
                   className="bg-card border-border focus:border-primary transition-colors"
                 />
-                <ValidationError
-                  prefix="Email"
-                  field="email"
-                  errors={state.errors}
-                />
               </div>
 
               <div>
@@ -169,20 +180,15 @@ export const Contact = () => {
                   rows={6}
                   className="bg-card border-border focus:border-primary transition-colors resize-none"
                 />
-                <ValidationError
-                  prefix="Message"
-                  field="message"
-                  errors={state.errors}
-                />
               </div>
 
               <Button
                 type="submit"
                 size="lg"
-                disabled={state.submitting}
+                disabled={isSubmitting}
                 className="w-full group relative overflow-hidden"
               >
-                Send Message
+                {isSubmitting ? "Sending..." : "Send Message"}
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
               </Button>
             </form>

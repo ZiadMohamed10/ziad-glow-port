@@ -119,6 +119,7 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <form onSubmit={onSubmit} className="space-y-6">
+              <input type="hidden" name="_to" value="ziadhamed635@gmail.com" />
               <div>
                 <Input
                   placeholder="Your Name"

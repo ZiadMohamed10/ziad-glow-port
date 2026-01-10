@@ -47,6 +47,10 @@ const skillsData = [
         name: "GitHub",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       },
+      {
+        name: "npm",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
+      },
     ],
   },
   {

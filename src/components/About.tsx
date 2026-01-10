@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
-import profileImage from "@/assets/ziad-headshot.jpeg";
+import profileImage from "@/assets/Zzziad.jpeg";
 const strengths = [
   "Clean & maintainable code",
   "Responsive design & accessibility",

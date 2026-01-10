@@ -26,7 +26,7 @@ const socialLinks = [
 // EmailJS Configuration
 const EMAILJS_SERVICE_ID = "service_portfolio";
 const EMAILJS_TEMPLATE_ID = "template_contact";
-const EMAILJS_PUBLIC_KEY = "YOUR_PUBLIC_KEY";
+const EMAILJS_PUBLIC_KEY = "ubNcbbdDZGy71ThSq";
 
 export const Contact = () => {
   const ref = useRef(null);

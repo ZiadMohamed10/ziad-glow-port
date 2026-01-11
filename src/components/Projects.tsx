@@ -66,7 +66,7 @@ const ProjectCard = ({
       }
       transition={{ duration: 0.6, delay: index * 0.2 }}
     >
-      <Card className="group hover:scale-105 transition-all duration-500 border-2 hover:border-primary relative overflow-hidden">
+      <Card className="group hover:scale-[1.02] sm:hover:scale-105 transition-all duration-500 border-2 hover:border-primary relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div
           className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
@@ -120,24 +120,24 @@ const ProjectCard = ({
 
 export const Projects = () => {
   return (
-    <section id="projects" className="py-20 px-6">
+    <section id="projects" className="py-16 sm:py-20 px-4 sm:px-6">
       <div className="max-w-6xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-16"
+          className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
             Featured Projects
           </h2>
-          <p className="text-muted-foreground text-lg">
+          <p className="text-muted-foreground text-base sm:text-lg px-2">
             A showcase of my recent work and personal projects
           </p>
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
           {projects.map((project, index) => (
             <ProjectCard key={project.title} project={project} index={index} />
           ))}

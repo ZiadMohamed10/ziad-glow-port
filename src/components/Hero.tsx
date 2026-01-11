@@ -8,15 +8,15 @@ export const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 py-20">
-      <div className="max-w-4xl mx-auto text-center">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 py-16 sm:py-20">
+      <div className="w-full max-w-4xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
           <motion.h1 
-            className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[hsl(var(--gradient-start))] to-[hsl(var(--gradient-end))] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift"
+            className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[hsl(var(--gradient-start))] to-[hsl(var(--gradient-end))] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift leading-tight"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -25,7 +25,7 @@ export const Hero = () => {
           </motion.h1>
           
           <motion.p
-            className="text-2xl md:text-3xl text-muted-foreground mb-4"
+            className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-3 sm:mb-4"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
@@ -34,7 +34,7 @@ export const Hero = () => {
           </motion.p>
           
           <motion.p
-            className="text-lg text-muted-foreground mb-8"
+            className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 px-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}

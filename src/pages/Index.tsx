@@ -8,8 +8,8 @@ import { Footer } from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen transition-colors duration-500">
-      <div className="max-w-full sm:max-w-2xl md:max-w-4xl lg:max-w-6xl mx-auto px-4 sm:px-6 lg:px-20">
+    <div className="min-h-screen transition-colors duration-500 overflow-x-hidden">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <ThemeToggle />
         <Hero />
         <About />

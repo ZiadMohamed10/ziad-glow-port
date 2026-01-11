@@ -32,7 +32,7 @@ export const Hero = () => {
       {/* Gradient orbs for depth - GPU accelerated */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <motion.div
-          className="absolute w-[500px] h-[500px] rounded-full bg-gradient-to-br from-primary/20 to-transparent blur-3xl"
+          className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] rounded-full bg-gradient-to-br from-primary/40 to-transparent blur-3xl"
           style={{ left: "10%", top: "20%" }}
           animate={{
             x: [0, 30, 0],
@@ -46,7 +46,7 @@ export const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute w-[400px] h-[400px] rounded-full bg-gradient-to-br from-[hsl(var(--gradient-end))]/15 to-transparent blur-3xl"
+          className="absolute w-[250px] md:w-[400px] h-[250px] md:h-[400px] rounded-full bg-gradient-to-br from-[hsl(var(--gradient-end))]/35 to-transparent blur-3xl"
           style={{ right: "10%", bottom: "20%" }}
           animate={{
             x: [0, -25, 0],
@@ -61,11 +61,11 @@ export const Hero = () => {
         />
       </div>
 
-      {/* Floating code snippets with 3D effect */}
+      {/* Floating code snippets with 3D effect - hidden on mobile for clean look */}
       {codeSnippets.map((snippet, index) => (
         <motion.div
           key={index}
-          className={`absolute ${snippet.size} font-mono text-primary/30 select-none pointer-events-none`}
+          className={`absolute ${snippet.size} font-mono text-primary/60 select-none pointer-events-none hidden md:block`}
           style={{
             left: snippet.x,
             top: snippet.y,
@@ -73,7 +73,7 @@ export const Hero = () => {
           }}
           initial={{ opacity: 0, z: -100 }}
           animate={{
-            opacity: [0.2, 0.4, 0.2],
+            opacity: [0.4, 0.7, 0.4],
             y: [0, -15, 0],
             rotateX: [0, 5, 0],
             rotateY: [-5, 5, -5],
@@ -85,17 +85,17 @@ export const Hero = () => {
             delay: snippet.delay,
           }}
         >
-          <span className="drop-shadow-[0_0_10px_hsl(var(--primary)/0.3)]">
+          <span className="drop-shadow-[0_0_15px_hsl(var(--primary)/0.5)]">
             {snippet.code}
           </span>
         </motion.div>
       ))}
 
-      {/* Geometric shapes for depth layers */}
+      {/* Geometric shapes for depth layers - hidden on mobile */}
       {shapes.map((shape, index) => (
         <motion.div
           key={`shape-${index}`}
-          className="absolute pointer-events-none"
+          className="absolute pointer-events-none hidden md:block"
           style={{
             left: shape.x,
             top: shape.y,
@@ -104,7 +104,7 @@ export const Hero = () => {
           }}
           initial={{ opacity: 0 }}
           animate={{
-            opacity: [0.05, 0.15, 0.05],
+            opacity: [0.15, 0.35, 0.15],
             scale: [1, 1.2, 1],
             rotate: shape.type === "square" ? [0, 45, 0] : 0,
           }}
@@ -116,7 +116,7 @@ export const Hero = () => {
           }}
         >
           <div
-            className={`w-full h-full border border-primary/20 ${
+            className={`w-full h-full border-2 border-primary/40 ${
               shape.type === "circle" ? "rounded-full" : "rounded-lg"
             } backdrop-blur-sm`}
           />
@@ -124,7 +124,7 @@ export const Hero = () => {
       ))}
 
       {/* Grid lines for tech feel */}
-      <div className="absolute inset-0 pointer-events-none opacity-[0.03]">
+      <div className="absolute inset-0 pointer-events-none opacity-[0.08]">
         <div
           className="w-full h-full"
           style={{
@@ -185,19 +185,6 @@ export const Hero = () => {
           >
             2 Years of Experience Building Modern Web Interfaces
           </motion.p>
-
-          {/* Terminal-style decorator */}
-          <motion.div
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary/50 border border-border/50 mb-8 backdrop-blur-sm"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.7 }}
-          >
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-            <span className="text-sm font-mono text-muted-foreground">
-              Available for new projects
-            </span>
-          </motion.div>
 
           <motion.div
             className="flex flex-col sm:flex-row gap-4 justify-center"

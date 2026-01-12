@@ -34,7 +34,9 @@ export const About = () => {
           }}
           className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">About Me</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+            About Me
+          </h2>
           <p className="text-muted-foreground text-lg">Get to know me better</p>
         </motion.div>
 
@@ -113,14 +115,12 @@ export const About = () => {
           >
             <p className="text-base sm:text-lg leading-relaxed">
               Front-end Developer with 2 years of hands-on experience building
-              modern, responsive, and high-performance web applications. Skilled
-              in HTML5, CSS3, JavaScript, React.js, TypeScript, and Tailwind
-              CSS, with a solid understanding of component-based architecture
-              and clean, maintainable code practices. Adept at translating UI/UX
-              designs into functional interfaces, optimizing performance, and
-              collaborating within agile teams. Strong knowledge of Git/GitHub
-              workflows and a continuous learner committed to delivering
-              seamless user experiences and reliable frontend solutions.
+              modern, responsive, and high-performance web applications. I
+              specialize in transforming UI/UX designs into clean, scalable, and
+              maintainable interfaces while focusing on performance and
+              usability. Experienced in working with modern frontend workflows
+              and collaborative Git-based environments, I’m committed to
+              delivering reliable and engaging user experiences.
             </p>
 
             <div className="space-y-3 pt-4">

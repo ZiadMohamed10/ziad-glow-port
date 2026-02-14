@@ -4,7 +4,7 @@ import { useRef } from "react";
 
 const skillsData = [
   {
-    title: "Coding",
+    title: "Frontend",
     skills: [
       {
         name: "HTML5",
@@ -33,6 +33,35 @@ const skillsData = [
     ],
   },
   {
+    title: "Backend",
+    skills: [
+      {
+        name: "C#",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+      },
+      {
+        name: ".NET Core",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+      },
+      {
+        name: "ASP.NET Core",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+      },
+      {
+        name: "REST API",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
+      },
+      {
+        name: "Entity Framework",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
+      },
+      {
+        name: "SQL Server",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+      },
+    ],
+  },
+  {
     title: "Tools",
     skills: [
       {
@@ -50,19 +79,6 @@ const skillsData = [
       {
         name: "npm",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
-      },
-    ],
-  },
-  {
-    title: "Projects & Deploy",
-    skills: [
-      {
-        name: "Netlify",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/netlify/netlify-original.svg",
-      },
-      {
-        name: "Vercel",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vercel/vercel-original.svg",
       },
     ],
   },

@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
-import profileImage from "@/assets/Zzziad.jpeg";
+import profileImage from "@/assets/Zzz.jpeg";
 const strengths = [
   "Clean & maintainable code",
   "Responsive design & accessibility",
@@ -114,13 +114,7 @@ export const About = () => {
             className="space-y-4 sm:space-y-6"
           >
             <p className="text-base sm:text-lg leading-relaxed">
-              Front-end Developer with 2 years of hands-on experience building
-              modern, responsive, and high-performance web applications. I
-              specialize in transforming UI/UX designs into clean, scalable, and
-              maintainable interfaces while focusing on performance and
-              usability. Experienced in working with modern frontend workflows
-              and collaborative Git-based environments, I’m committed to
-              delivering reliable and engaging user experiences.
+Full-Stack Developer (React & .NET) with hands-on experience building modern, responsive, and scalable web applications. I specialize in developing dynamic front-end interfaces using React and integrating them seamlessly with robust back-end systems built with .NET. I have experience designing and implementing RESTful APIs, managing databases, and building admin dashboards and complete web solutions. Passionate about writing clean, maintainable code and working within collaborative Git-based environments, I focus on performance, usability, and delivering reliable end-to-end user experiences.
             </p>
 
             <div className="space-y-3 pt-4">

@@ -112,36 +112,36 @@ const ProjectCard = ({
           </CardDescription>
         </CardHeader>
 
-{/* Card Content */}
-<CardContent className="flex flex-col gap-4 relative z-10">
-  <div className="flex flex-wrap gap-2">
-    {project.technologies.map((tech) => (
-      <Badge
-        key={tech}
-        variant="outline"
-        className="group-hover:border-primary transition-colors"
-      >
-        {tech}
-      </Badge>
-    ))}
-  </div>
+        {/* Card Content */}
+        <CardContent className="flex flex-col gap-4 relative z-10">
+          <div className="flex flex-wrap gap-2">
+            {project.technologies.map((tech) => (
+              <Badge
+                key={tech}
+                variant="outline"
+                className="group-hover:border-primary transition-colors"
+              >
+                {tech}
+              </Badge>
+            ))}
+          </div>
 
-  {/* View Live Button */}
-  {project.liveUrl && (
-    <a
-      href={
-        project.liveUrl.startsWith("http")
-          ? project.liveUrl
-          : `https://${project.liveUrl}`
-      }
-      target="_blank"
-      rel="noopener noreferrer"
-      className="self-start mt-2 px-5 py-2 rounded-lg bg-primary/70 text-white font-semibold hover:bg-primary/90 hover:scale-105 transition-all duration-300 relative z-10"
-    >
-      View Live
-    </a>
-  )}
-</CardContent>
+          {/* View Live Button */}
+          {project.liveUrl && (
+            <a
+              href={
+                project.liveUrl.startsWith("http")
+                  ? project.liveUrl
+                  : `https://${project.liveUrl}`
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="self-start mt-2 px-5 py-2 rounded-lg bg-primary/70 text-white font-semibold hover:bg-primary/90 hover:scale-105 transition-all duration-300 relative z-10"
+            >
+              View Live
+            </a>
+          )}
+        </CardContent>
       </Card>
     </motion.div>
   );

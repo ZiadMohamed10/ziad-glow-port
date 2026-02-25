@@ -17,30 +17,30 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 211 100% 50%;
+    --primary: 152 69% 31%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96%;
-    --secondary-foreground: 222 47% 11%;
+    --secondary: 150 30% 94%;
+    --secondary-foreground: 152 47% 11%;
 
-    --muted: 210 40% 96%;
-    --muted-foreground: 215 16% 47%;
+    --muted: 150 30% 94%;
+    --muted-foreground: 150 16% 47%;
 
-    --accent: 211 100% 50%;
+    --accent: 152 69% 31%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 211 100% 50%;
+    --border: 150 25% 88%;
+    --input: 150 25% 88%;
+    --ring: 152 69% 31%;
 
     --radius: 0.75rem;
 
-    --neon-glow: 211 100% 50%;
-    --gradient-start: 211 100% 50%;
-    --gradient-end: 271 76% 53%;
+    --neon-glow: 152 69% 31%;
+    --gradient-start: 152 69% 31%;
+    --gradient-end: 170 60% 40%;
     
     --shadow-glow: 0 0 30px hsl(var(--neon-glow) / 0.3);
     --transition-smooth: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
@@ -56,28 +56,28 @@ All colors MUST be HSL.
     --popover: 222 47% 8%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 199 89% 48%;
-    --primary-foreground: 222 47% 6%;
+    --primary: 152 80% 40%;
+    --primary-foreground: 152 47% 6%;
 
-    --secondary: 217 33% 12%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 150 30% 12%;
+    --secondary-foreground: 150 40% 98%;
 
-    --muted: 217 33% 15%;
-    --muted-foreground: 215 20% 65%;
+    --muted: 150 30% 15%;
+    --muted-foreground: 150 20% 65%;
 
-    --accent: 199 89% 48%;
-    --accent-foreground: 222 47% 6%;
+    --accent: 152 80% 40%;
+    --accent-foreground: 152 47% 6%;
 
     --destructive: 0 62% 50%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 18%;
-    --input: 217 33% 18%;
-    --ring: 199 89% 48%;
+    --border: 150 30% 18%;
+    --input: 150 30% 18%;
+    --ring: 152 80% 40%;
 
-    --neon-glow: 199 89% 48%;
-    --gradient-start: 199 89% 48%;
-    --gradient-end: 280 85% 65%;
+    --neon-glow: 152 80% 40%;
+    --gradient-start: 152 80% 40%;
+    --gradient-end: 170 70% 45%;
     
     --shadow-glow: 0 0 30px hsl(var(--neon-glow) / 0.4);
   }

@@ -30,7 +30,7 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Full-Stack Developer (React & .NET)
+            Front-end Developer & Android Developer
           </motion.p>
           
           <motion.p

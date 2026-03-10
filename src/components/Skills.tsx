@@ -33,31 +33,23 @@ const skillsData = [
     ],
   },
   {
-    title: "Backend",
+    title: "Android",
     skills: [
       {
-        name: "C#",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+        name: "kotlin",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
       },
       {
-        name: ".NET Core",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
-      },
-      {
-        name: "ASP.NET Core",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-original.svg",
+        name: "OOP",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
       },
       {
         name: "REST API",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
       },
-      {
-        name: "Entity Framework",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dotnetcore/dotnetcore-original.svg",
-      },
-      {
-        name: "SQL Server",
-        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/microsoftsqlserver/microsoftsqlserver-plain.svg",
+            {
+        name: "Android Fundamentals",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
       },
     ],
   },
@@ -75,6 +67,14 @@ const skillsData = [
       {
         name: "GitHub",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+      },
+      {
+        name: "intelliJ IDEA",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg",
+      },
+      {
+        name: "android studio",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
       },
       {
         name: "npm",

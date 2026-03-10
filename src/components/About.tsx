@@ -114,7 +114,11 @@ export const About = () => {
             className="space-y-4 sm:space-y-6"
           >
             <p className="text-base sm:text-lg leading-relaxed">
-Full-Stack Developer (React & .NET) with hands-on experience building modern, responsive, and scalable web applications. I specialize in developing dynamic front-end interfaces using React and integrating them seamlessly with robust back-end systems built with .NET. I have experience designing and implementing RESTful APIs, managing databases, and building admin dashboards and complete web solutions. Passionate about writing clean, maintainable code and working within collaborative Git-based environments, I focus on performance, usability, and delivering reliable end-to-end user experiences.
+              Web Developer with 2 years of experience in frontend development
+              and Specialized in creating modern, responsive, and
+              high-performance web applications using React.js. Currently
+              gaining practical experience as an Android Developer Intern while
+              continuously expanding my skills.
             </p>
 
             <div className="space-y-3 pt-4">

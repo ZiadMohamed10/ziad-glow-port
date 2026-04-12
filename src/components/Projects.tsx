@@ -11,8 +11,9 @@ import {
 } from "@/components/ui/card";
 import { Building2, Scale, Stethoscope } from "lucide-react";
 import rightsImage from "@/assets/Rights.png";
-import infrastructureImage from "@/assets/infrastructure-project.jpg";
+import elshibliImage from "@/assets/Elshibli.png";
 import dentalImage from "@/assets/dental-project.jpg";
+import hermedImage from "@/assets/Hermed.png";
 
 const projects = [
   {
@@ -32,14 +33,24 @@ const projects = [
     liveUrl: "https://www.rightsgrp.com",
   },
   {
+    title: "Hermed Delivering Dental Excellence",
+    description:
+      "Premium dental instruments, equipment, and supplies for professionals who demand the best",
+    icon: Stethoscope,
+    status: "In Progress",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    image: hermedImage,
+  },
+  {
     title: "El Shibili Construction & Development Portal",
     description:
       "Developing a comprehensive web portal for El Shibili, a construction and development company, showcasing their services and projects.",
     icon: Building2,
     status: "In Progress",
     technologies: ["React", "TypeScript", "Tailwind CSS"],
-    image: infrastructureImage,
+    image: elshibliImage,
   },
+
   {
     title: "Premium Dental Supplies",
     description:

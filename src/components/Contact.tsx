@@ -4,7 +4,7 @@ import { useRef, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { Github, Linkedin, Mail, Phone } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 import emailjs from "@emailjs/browser";
 
@@ -16,11 +16,10 @@ const socialLinks = [
     href: "mailto:ziadhamed635@gmail.com",
   },
   {
-    icon: Linkedin,
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/ziad-mohamed-a902ba336/",
+    icon: MapPin,
+    label: "Egypt, New Damietta",
+    href: "https://maps.google.com/?q=Egypt,New+Damietta",
   },
-  { icon: Github, label: "GitHub", href: "https://github.com/ZiadMohamed10" },
 ];
 
 // EmailJS Configuration
@@ -58,7 +57,7 @@ export const Contact = () => {
           message: formData.message,
           to_email: "ziadhamed635@gmail.com",
         },
-        EMAILJS_PUBLIC_KEY
+        EMAILJS_PUBLIC_KEY,
       );
 
       toast({
@@ -92,7 +91,9 @@ export const Contact = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-10 sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">Get In Touch</h2>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+            Get In Touch
+          </h2>
           <p className="text-muted-foreground text-base sm:text-lg">
             Let's work together on your next project
           </p>
@@ -107,7 +108,9 @@ export const Contact = () => {
             transition={{ duration: 0.6 }}
             className="space-y-8"
           >
-            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">Contact Information</h3>
+            <h3 className="text-xl sm:text-2xl font-semibold mb-4 sm:mb-6">
+              Contact Information
+            </h3>
             <div className="space-y-4">
               {socialLinks.map((link, index) => {
                 const Icon = link.icon;

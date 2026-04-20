@@ -1,10 +1,19 @@
-import { motion } from "framer-motion";
+import { motion, animate } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Mail } from "lucide-react";
 
 export const Hero = () => {
   const scrollToSection = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
+    const element = document.getElementById(id);
+    if (element) {
+      const targetPosition =
+        element.getBoundingClientRect().top + window.scrollY;
+      animate(window.scrollY, targetPosition, {
+        duration: 1, // Controlled gradual duration (in seconds)
+        ease: [0.45, 0, 0.55, 1], // Custom cubic-bezier for a natural feel
+        onUpdate: (value) => window.scrollTo(0, value),
+      });
+    }
   };
 
   return (
@@ -15,7 +24,7 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <motion.h1 
+          <motion.h1
             className="text-4xl sm:text-5xl md:text-7xl font-bold mb-4 sm:mb-6 bg-gradient-to-r from-[hsl(var(--gradient-start))] to-[hsl(var(--gradient-end))] bg-clip-text text-transparent bg-[length:200%_auto] animate-gradient-shift leading-tight"
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -23,7 +32,7 @@ export const Hero = () => {
           >
             Ziad Mohamed
           </motion.h1>
-          
+
           <motion.p
             className="text-xl sm:text-2xl md:text-3xl text-muted-foreground mb-3 sm:mb-4"
             initial={{ opacity: 0 }}
@@ -32,7 +41,7 @@ export const Hero = () => {
           >
             Front-end Developer & Android Developer
           </motion.p>
-          
+
           <motion.p
             className="text-base sm:text-lg text-muted-foreground mb-6 sm:mb-8 px-2"
             initial={{ opacity: 0 }}
@@ -57,7 +66,7 @@ export const Hero = () => {
               <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700" />
             </Button>
-            
+
             <Button
               size="lg"
               variant="outline"

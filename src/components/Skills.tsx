@@ -80,6 +80,10 @@ const skillsData = [
         name: "npm",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/npm/npm-original-wordmark.svg",
       },
+      {
+        name: "Postman",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/postman/postman-original.svg",
+      },
     ],
   },
 ];

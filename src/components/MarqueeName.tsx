@@ -11,7 +11,7 @@ export const MarqueeName = () => {
           x: ["0%", "-50%"],
         }}
         transition={{
-          duration: 25,
+          duration: 10,
           ease: "linear",
           repeat: Infinity,
           repeatType: "loop",

@@ -8,12 +8,13 @@ export const MarqueeName = () => {
       <motion.div
         className="flex"
         animate={{
-          x: ["0%", "-150%"],
+          x: ["0%", "-50%"],
         }}
         transition={{
           duration: 25,
           ease: "linear",
           repeat: Infinity,
+          repeatType: "loop",
         }}
       >
         {/* We duplicate the content and animate to -50% for a truly seamless infinite loop */}

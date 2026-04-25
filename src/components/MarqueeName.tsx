@@ -11,13 +11,13 @@ export const MarqueeName = () => {
           x: ["0%", "-50%"],
         }}
         transition={{
-          duration: 10,
+          duration: 15,
           ease: "linear",
           repeat: Infinity,
           repeatType: "loop",
         }}
       >
-        {/* We duplicate the content and animate to -50% for a truly seamless infinite loop */}
+        {/* Duplicated content + animating to -50% creates one continuous seamless loop */}
         {[...Array(2)].map((_, idx) => (
           <div key={idx} className="flex shrink-0 items-center">
             {[...Array(4)].map((_, i) => (

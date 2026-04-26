@@ -36,7 +36,7 @@ const projects = [
   {
     title: "Vyron",
     description:
-      "Premium compression and recovery wear engineered in Egypt. Built to outlast every set, every sprint, every season.",
+      "Developed a responsive e-commerce website for Vyron, a fashion brand specializing in compression wear and sweatpants. The website features a clean design, smooth user experience, and allows users to easily browse and explore products across all devices.",
     icon: Dumbbell,
     technologies: ["React", "Tailwind CSS", "TypeScript"],
     image: vyronImage,

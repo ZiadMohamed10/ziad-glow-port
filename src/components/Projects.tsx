@@ -9,12 +9,19 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Building2, Scale, Dumbbell, Stethoscope } from "lucide-react";
+import {
+  Building2,
+  Scale,
+  Dumbbell,
+  Stethoscope,
+  SprayCan,
+} from "lucide-react";
 import rightsImage from "@/assets/Rights.png";
 import elshibliImage from "@/assets/Elshibli.png";
 import dentalImage from "@/assets/dental-project.jpg";
 import hermedImage from "@/assets/Hermed.png";
 import vyronImage from "@/assets/Vyron.png";
+import elixirImage from "@/assets/Elixir.png";
 
 const projects = [
   {
@@ -33,6 +40,7 @@ const projects = [
     image: rightsImage,
     liveUrl: "https://www.rightsgrp.com",
   },
+
   {
     title: "Vyron",
     description:
@@ -42,15 +50,24 @@ const projects = [
     image: vyronImage,
     liveUrl: "https://vyron-rho.vercel.app/",
   },
-  // {
-  //   title: "Hermed Delivering Dental Excellence",
-  //   description:
-  //     "Premium dental instruments, equipment, and supplies for professionals who demand the best",
-  //   icon: Stethoscope,
-  //   status: "In Progress",
-  //   technologies: ["React", "TypeScript", "Tailwind CSS"],
-  //   image: hermedImage,
-  // },
+  {
+    title: "Elixir",
+    description:
+      "A modern frontend perfume brand website featuring a clean and elegant UI, responsive design, and a smooth user experience for showcasing luxury fragrance products.",
+    icon: SprayCan,
+    technologies: ["React", "Tailwind CSS", "TypeScript"],
+    image: elixirImage,
+    liveUrl: "https://elixir.website",
+  },
+  {
+    title: "Hermed Delivering Dental Excellence",
+    description:
+      "Premium dental instruments, equipment, and supplies for professionals who demand the best",
+    icon: Stethoscope,
+    status: "In Progress",
+    technologies: ["React", "TypeScript", "Tailwind CSS"],
+    image: hermedImage,
+  },
   {
     title: "El Shibili Construction & Development Portal",
     description:

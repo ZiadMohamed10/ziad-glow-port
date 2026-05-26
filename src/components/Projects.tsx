@@ -110,8 +110,9 @@ const ProjectCard = ({
           : { opacity: 0, x: index % 2 === 0 ? -50 : 50 }
       }
       transition={{ duration: 0.6, delay: index * 0.2 }}
+      className="h-full"
     >
-      <Card className="group hover:scale-[1.02] sm:hover:scale-105 transition-all duration-500 border-2 hover:border-primary relative overflow-hidden">
+      <Card className="group h-full flex flex-col hover:scale-[1.02] sm:hover:scale-105 transition-all duration-500 border-2 hover:border-primary relative overflow-hidden">
         {/* Hover glow */}
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
         <div
@@ -130,7 +131,7 @@ const ProjectCard = ({
         </div>
 
         {/* Card Header */}
-        <CardHeader>
+        <CardHeader className="flex-1">
           <div className="flex items-start justify-between mb-4">
             <div className="p-3 rounded-xl bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
               <Icon className="w-8 h-8 text-primary" />

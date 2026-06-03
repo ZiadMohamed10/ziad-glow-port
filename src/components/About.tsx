@@ -114,11 +114,9 @@ export const About = () => {
             className="space-y-4 sm:space-y-6"
           >
             <p className="text-base sm:text-lg leading-relaxed">
-              Web Developer with 2 years of experience in frontend development
+              Web Developer with 3 years of experience in frontend development
               and Specialized in creating modern, responsive, and
-              high-performance web applications using React.js. Currently
-              gaining practical experience as an Android Developer Intern while
-              continuously expanding my skills.
+              high-performance web applications using React.js.
             </p>
 
             <div className="space-y-3 pt-4">

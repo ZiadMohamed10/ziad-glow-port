@@ -5,18 +5,18 @@ import { Briefcase } from "lucide-react";
 
 const experiences = [
   {
-    role: "Android Developer Intern",
-    company: "Systemira",
-    period: "2026 – Present",
-    description:
-      "Currently gaining hands-on experience in Android development, working on building mobile applications and improving performance while collaborating with a development team.",
-  },
-  {
     role: "Front-end Developer (Freelance)",
     company: "Remote",
-    period: "2025 – Present",
+    period: "2024 – Present",
     description:
       "Developing modern and responsive web applications using React.js, focusing on performance, UI/UX, and scalable frontend architecture.",
+  },
+  {
+    role: "Android Developer",
+    company: "Systemira",
+    period: "Mar 2026 – Jun 2026",
+    description:
+      "I gained experience in Android application development, which involves building and controlling mobile applications while collaborating with the development team.",
   },
 ];
 

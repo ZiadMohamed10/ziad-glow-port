@@ -39,7 +39,7 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.4 }}
           >
-            Front-end Developer & Android Developer
+            Front-end Developer
           </motion.p>
 
           <motion.p
@@ -48,7 +48,7 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.6 }}
           >
-            2 Years of Experience Building Modern Web Interfaces
+            3 Years of Experience Building Modern Web Interfaces
           </motion.p>
 
           <motion.div

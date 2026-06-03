@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
 import { CheckCircle2 } from "lucide-react";
-import profileImage from "@/assets/ZzzV1.jpeg";
+import profileImage from "@/assets/Ziii.png";
 const strengths = [
   "Clean & maintainable code",
   "Responsive design & accessibility",
@@ -87,6 +87,7 @@ export const About = () => {
                 src={profileImage}
                 alt="Ziad Mohamed"
                 className="relative w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full object-cover border-4 border-primary shadow-2xl group-hover:scale-105 transition-transform duration-500"
+                style={{ objectPosition: "50% 65% 30%" }}
               />
             </div>
           </motion.div>

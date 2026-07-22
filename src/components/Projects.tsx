@@ -15,6 +15,7 @@ import {
   Dumbbell,
   Stethoscope,
   SprayCan,
+  Hotel,
 } from "lucide-react";
 import rightsImage from "@/assets/Rights.png";
 import elshibliImage from "@/assets/Elshibli.png";
@@ -64,7 +65,7 @@ const projects = [
     title: "Hotel Booking",
     description:
       "A modern hotel booking platform that allows users to explore available rooms, view detailed information, and make reservations through a smooth and responsive user experience.",
-    icon: SprayCan,
+    icon: Hotel,
     technologies: ["React", "Tailwind CSS", "JavaScript"],
     image: hotelbookingImage,
     liveUrl: "https://hotel-booking-bice-seven.vercel.app/",

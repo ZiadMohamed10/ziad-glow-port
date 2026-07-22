@@ -22,6 +22,7 @@ import dentalImage from "@/assets/dental-project.jpg";
 import hermedImage from "@/assets/Hermed.png";
 import vyronImage from "@/assets/Vyron.png";
 import elixirImage from "@/assets/Elixir.png";
+import hotelbookingImage from "@/assets/Hotelbooking.png";
 
 const projects = [
   {
@@ -58,6 +59,15 @@ const projects = [
     technologies: ["React", "Tailwind CSS", "TypeScript"],
     image: elixirImage,
     liveUrl: "https://elixir.website",
+  },
+  {
+    title: "Hotel Booking",
+    description:
+      "A modern hotel booking platform that allows users to explore available rooms, view detailed information, and make reservations through a smooth and responsive user experience.",
+    icon: SprayCan,
+    technologies: ["React", "Tailwind CSS", "JavaScript"],
+    image: hotelbookingImage,
+    liveUrl: "https://hotel-booking-bice-seven.vercel.app/",
   },
   {
     title: "Hermed Delivering Dental Excellence",

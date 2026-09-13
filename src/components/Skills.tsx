@@ -27,6 +27,14 @@ const skillsData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
       },
       {
+        name: "Next.js",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+      },
+      {
+        name: "Redux",
+        icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
+      },
+      {
         name: "Tailwind CSS",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-original.svg",
       },
@@ -47,7 +55,7 @@ const skillsData = [
         name: "REST API",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swagger/swagger-original.svg",
       },
-            {
+      {
         name: "Android Fundamentals",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/android/android-original.svg",
       },

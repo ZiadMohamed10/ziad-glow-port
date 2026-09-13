@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const skillsData = [
@@ -31,7 +30,7 @@ const skillsData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
       },
       {
-        name: "Redux",
+        name: "Redux Toolkit",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redux/redux-original.svg",
       },
       {
@@ -40,11 +39,12 @@ const skillsData = [
       },
     ],
   },
+
   {
     title: "Android",
     skills: [
       {
-        name: "kotlin",
+        name: "Kotlin",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
       },
       {
@@ -61,6 +61,7 @@ const skillsData = [
       },
     ],
   },
+
   {
     title: "Tools",
     skills: [
@@ -77,11 +78,11 @@ const skillsData = [
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
       },
       {
-        name: "intelliJ IDEA",
+        name: "IntelliJ IDEA",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/intellij/intellij-original.svg",
       },
       {
-        name: "android studio",
+        name: "Android Studio",
         icon: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/androidstudio/androidstudio-original.svg",
       },
       {
@@ -113,34 +114,41 @@ const SkillCard = ({
       ref={ref}
       initial={{ opacity: 0, y: 50 }}
       animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.2,
+      }}
       className="group relative"
     >
-      <div className="relative p-6 rounded-2xl bg-card border-2 border-border hover:border-primary transition-all duration-500 hover:scale-105 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+      <div className="relative overflow-hidden rounded-2xl border-2 border-border bg-card p-6 transition-all duration-500 hover:scale-105 hover:border-primary">
+        <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-transparent opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+
         <div
-          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
           style={{ boxShadow: "var(--shadow-glow)" }}
         />
 
-        <h3 className="text-2xl font-bold mb-8 text-center">{title}</h3>
+        <h3 className="relative z-10 mb-8 text-center text-2xl font-bold">
+          {title}
+        </h3>
 
-        <div className="grid grid-cols-[repeat(auto-fit,minmax(60px,1fr))] gap-4 justify-items-center px-2">
+        <div className="relative z-10 grid grid-cols-[repeat(auto-fit,minmax(60px,1fr))] justify-items-center gap-4 px-2">
           {skills.map((skill) => (
             <motion.div
               key={skill.name}
               whileHover={{ scale: 1.12, y: -5 }}
-              className="relative group/icon"
+              className="group/icon relative"
             >
               <div className="flex flex-col items-center gap-2">
-                <div className="w-12 h-12 flex items-center justify-center p-1 bg-white/10 rounded transition-all duration-300">
+                <div className="flex h-12 w-12 items-center justify-center rounded bg-white/10 p-1 transition-all duration-300">
                   <img
                     src={skill.icon}
                     alt={skill.name}
-                    className="w-full h-full object-contain transition-all duration-300 group-hover:drop-shadow-[0_0_8px_hsl(var(--neon-glow))]"
+                    className="h-full w-full object-contain transition-all duration-300 group-hover/icon:drop-shadow-[0_0_8px_hsl(var(--neon-glow))]"
                   />
                 </div>
-                <span className="text-xs text-center opacity-0 group-hover/icon:opacity-100 transition-opacity duration-200 bg-white/20 rounded px-2 py-1 max-w-[80px] break-words">
+
+                <span className="max-w-[90px] break-words rounded bg-white/20 px-2 py-1 text-center text-xs opacity-0 transition-opacity duration-200 group-hover/icon:opacity-100">
                   {skill.name}
                 </span>
               </div>
@@ -154,24 +162,25 @@ const SkillCard = ({
 
 export const Skills = () => {
   return (
-    <section id="skills" className="py-16 sm:py-20 px-4 sm:px-6">
-      <div className="max-w-7xl mx-auto">
+    <section id="skills" className="px-4 py-16 sm:px-6 sm:py-20">
+      <div className="mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-10 sm:mb-16"
+          className="mb-10 text-center sm:mb-16"
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-3 sm:mb-4">
+          <h2 className="mb-3 text-3xl font-bold sm:mb-4 sm:text-4xl md:text-5xl">
             Skills & Expertise
           </h2>
-          <p className="text-muted-foreground text-base sm:text-lg">
+
+          <p className="text-base text-muted-foreground sm:text-lg">
             Technologies I work with
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-8 md:grid-cols-3">
           {skillsData.map((category, index) => (
             <SkillCard key={category.title} {...category} index={index} />
           ))}

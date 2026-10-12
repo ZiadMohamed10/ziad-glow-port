@@ -9,10 +9,6 @@ const SocialIcon = ({
 }) => <i className={`${icon} ${className}`} aria-hidden="true" />;
 
 const footerSocials = [
-  {
-    icon: "fa-brands fa-linkedin",
-    href: "https://www.linkedin.com/in/ziad-mohamed-a902ba336/",
-  },
   { icon: "fa-brands fa-github", href: "https://github.com/ZiadMohamed10" },
   {
     icon: "fa-brands fa-facebook",
